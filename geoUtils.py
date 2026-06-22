@@ -1,5 +1,12 @@
 def fix_geom(g):
-    """Corrige geometria inválida de forma robusta."""
+    """
+    Corrige geometria inválida de forma robusta.
+    Usei na correção do primeiro arquivo br_states.json
+    que acontecia em Carpina, Pernambuco:
+    # Coordenada informada pelo erro
+    x_erro = -35.225697852012971
+    y_erro = -7.8286115532622551
+    """
     if g is None or g.is_empty:
         return g
     # 1) make_valid (preferencial)
